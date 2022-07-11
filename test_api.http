@@ -1,0 +1,71 @@
+### создание продукта
+POST http://localhost:8000/api/v1/products/
+Content-Type: application/json
+
+{
+  "title": "Продукт №5",
+  "description": "Помидоры"
+}
+
+### получение продуктов
+GET http://localhost:8000/api/v1/products/?page=1
+Content-Type: application/json
+
+### обновление продукта
+PATCH http://localhost:8000/api/v1/products/4/
+Content-Type: application/json
+
+{
+  "description": "Персики"
+}
+
+### удаление продукта
+DELETE http://localhost:8000/api/v1/products/6/
+Content-Type: application/json
+
+### поиск продуктов по названию и описанию
+GET http://localhost:8000/api/v1/products/?search=а
+Content-Type: application/json
+
+### создание склада
+POST http://localhost:8000/api/v1/stocks/
+Content-Type: application/json
+
+{
+  "address": "Саратов",
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 250,
+      "price": 100.99
+    },
+    {
+      "product": 3,
+      "quantity": 100,
+      "price": 199.99
+    }
+  ]
+}
+
+### обновляем записи на складе
+PATCH http://localhost:8000/api/v1/stocks/2/
+Content-Type: application/json
+
+{
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 100,
+      "price": 130.99
+    },
+    {
+      "product": 3,
+      "quantity": 200,
+      "price": 199.99
+    }
+  ]
+}
+
+### поиск складов, где есть определенный продукт
+GET http://localhost:8000/api/v1/stocks/?products=1
+Content-Type: application/json
