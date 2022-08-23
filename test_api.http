@@ -1,5 +1,5 @@
 ### создание продукта
-POST http://localhost:8000/api/v1/products/
+POST http://localhost:8888/api/v1/products/
 Content-Type: application/json
 
 {
@@ -8,27 +8,27 @@ Content-Type: application/json
 }
 
 ### получение продуктов
-GET http://localhost:8000/api/v1/products/?page=1
+GET http://localhost:8888/api/v1/products/?page=1
 Content-Type: application/json
 
 ### обновление продукта
-PATCH http://localhost:8000/api/v1/products/4/
+PATCH http://localhost:8888/api/v1/products/2/
 Content-Type: application/json
 
 {
-  "description": "Персики"
+  "description": "Product #2 ---"
 }
 
 ### удаление продукта
-DELETE http://localhost:8000/api/v1/products/6/
+DELETE http://localhost:8888/api/v1/products/6/
 Content-Type: application/json
 
 ### поиск продуктов по названию и описанию
-GET http://localhost:8000/api/v1/products/?search=а
+GET http://localhost:8888/api/v1/products/?search=а
 Content-Type: application/json
 
 ### создание склада
-POST http://localhost:8000/api/v1/stocks/
+POST http://localhost:8888/api/v1/stocks/
 Content-Type: application/json
 
 {
@@ -48,7 +48,7 @@ Content-Type: application/json
 }
 
 ### обновляем записи на складе
-PATCH http://localhost:8000/api/v1/stocks/2/
+PATCH http://localhost:8888/api/v1/stocks/2/
 Content-Type: application/json
 
 {
@@ -67,5 +67,5 @@ Content-Type: application/json
 }
 
 ### поиск складов, где есть определенный продукт
-GET http://localhost:8000/api/v1/stocks/?products=1
+GET http://localhost:8888/api/v1/stocks/?products=1
 Content-Type: application/json
